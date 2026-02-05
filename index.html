@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <header class="topbar">
+            <h1 class="title">Sorting Visualizer</h1>
+            <div class="controls" role="region" aria-label="controls">
+                <div class="control-row">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algorithm">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="selection">Selection Sort</option>
+                        <option value="merge">Merge Sort</option>
+                        <option value="quick">Quick Sort</option>
+                    </select>
+                </div>
+                <div class="control-row">
+                    <label for="size">Size</label>
+                    <select id="size">
+                        <option value="10">10</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="control-row">
+                    <label for="speed">Speed</label>
+                    <input type="range" id="speed" min="1" max="100" value="50">
+                </div>
+                <div class="control-actions">
+                    <button id="generateArrayButton" class="btn ghost">New</button>
+                    <button id="sortButton" class="btn primary">Sort at Once</button>
+                    <button id="stepSortButton" class="btn primary">Step-by-Step</button>
+                </div>
+                <div class="step-controls" id="stepControls" style="display:none;">
+                    <button id="prevButton" class="btn ghost">← Prev</button>
+                    <span id="stepCounter" class="step-counter">Step 0/0</span>
+                    <button id="nextButton" class="btn ghost">Next →</button>
+                    <button id="resetStepButton" class="btn ghost">Exit</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section id="visualization" class="card">
+                <div id="arrayContainer" class="array-container"></div>
+                <div id="arrayBox" class="array-box" aria-hidden="false"></div>
+            </section>
+        </main>
+
+        <footer class="footer">Made with ♥ by Karan Singh Bhanwal</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
